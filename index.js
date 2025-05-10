@@ -1,4 +1,5 @@
 const http = require("http");
+const url = require("url");
 
 http
   .createServer((req, res) => {
@@ -6,3 +7,5 @@ http
     res.end("Hello World\n");
   })
   .listen(8080);
+
+url.parse("http://localhost:8080", true, true);
